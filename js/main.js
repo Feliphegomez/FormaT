@@ -1250,6 +1250,8 @@ function cargarCalendary(category,filtro){
 };
 
 function createCalendaryModal(){
+	var infoLocalSession = FormaT.loadSession();
+	
 	datos = {};
 	datos.action = "create";
 	datos.fecha = $('#bd-modal-create-capas-calendary input[name="fecha"]').val();
@@ -1258,6 +1260,7 @@ function createCalendaryModal(){
 	datos.lugar = $('#bd-modal-create-capas-calendary input[name="lugar"]').val();
 	datos.encargado = $('#bd-modal-create-capas-calendary input[name="encargado"]').val();
 	datos.category = $('#bd-modal-create-capas-calendary input[name="category"]').val();
+	datos.piloto = infoLocalSession.authResponse.signedRequest.piloto;
 	
 	if(
 		datos.fecha !== ''
@@ -1276,6 +1279,8 @@ function createCalendaryModal(){
 				location.reload();
 			}else{
 				$.notify(r.message, "error");
+				console.log(datos);
+				console.log(r);
 			}
 		});
 	}else{
@@ -1918,7 +1923,7 @@ function crearMenuSideBarDefault(data){
 			$html = '';
 			$html += '<li>';
 				$html += '<a href="#'+data.type+'Submenu" data-toggle="collapse" aria-expanded="false">';
-					$html += '<i class="'+data.icon+'"></i>';
+					$html += '<i class="'+data.icon+'"></i> ';
 					$html += data.name;
 				$html += '</a>';
 				$html += '<ul class="collapse list-unstyled" id="'+data.type+'Submenu">';
