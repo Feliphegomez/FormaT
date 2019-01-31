@@ -19,9 +19,9 @@ define('folderSitio', ''); // Ruta de la carpeta del Sitio
 define('folderAPI', '/api/'.v_api); // Ruta de la carpeta de la API
 
 define('DB_SERVER', 'localhost'); // DB Host url
-define('DB_USER', 'feliphegomez_f2'); // DB Usuario de Acceso
-define('DB_PASS', 'lnQ40Me6oN'); // DB Contraseña de Acceso
-define('DB_NAME', 'feliphegomez_f2'); // DB Nombre de la Base de Datos
+define('DB_USER', 'admin_format'); // DB Usuario de Acceso
+define('DB_PASS', 'kWBFFDULgI'); // DB Contraseña de Acceso
+define('DB_NAME', 'admin_intranet'); // DB Nombre de la Base de Datos
 
 
 
