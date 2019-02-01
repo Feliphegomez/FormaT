@@ -1,6 +1,6 @@
 <?php
-error_reporting(-1);
-ini_set('display_errors', 'on');
+#error_reporting(-1);
+#ini_set('display_errors', 'on');
 
 setlocale(LC_TIME,"es_CO"); // Configurar Hora para Colombia
 setlocale(LC_TIME, 'es_CO.UTF-8'); // Configurar Hora para Colombia en UTF-8

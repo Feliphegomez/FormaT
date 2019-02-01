@@ -1,5 +1,5 @@
 <?php require_once("config/autoload.php"); ?>
-<!Doctype html>
+<!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,38 +10,33 @@
     </head>
     <body>
 		<?php 
-			
-				include('config/init/sidebar.php');
-				include('config/init/navbar-top.php');
-				?>
-				<div class="wrapper">			
-					<div id="content">
-						<div id="page" class="">
-							<?php 
-							
-								if(pageActive() == false || pageActive() == 'index'){
-									include('config/docs/site/pages/feeds.php');
-								}else{
-									
-									$file = pageActive();
-									$file = "config/docs/site/pages/{$file}.php";
-									
-									if(file_exists($file)){
-										include($file);
-									}else{
-										include('config/docs/site/errors/404.php');
-									}
-								}
-							?>
-							<div class="clearfix"></div>
-						</div>
-						<?php include('config/init/footer.php'); ?>
-					</div>
-				</div>
-				<?php include('config/init/scripts.php'); ?>
-				
-				<?php 
+			include('config/init/sidebar.php');
+			include('config/init/navbar-top.php');
 		?>
-		
+		<div class="wrapper">			
+			<div id="content">
+				<div id="page" class="">
+					<?php 
+					
+						if(pageActive() == false || pageActive() == 'index'){
+							include('config/docs/site/pages/feeds.php');
+						}else{
+							
+							$file = pageActive();
+							$file = "config/docs/site/pages/{$file}.php";
+							
+							if(file_exists($file)){
+								include($file);
+							}else{
+								include('config/docs/site/errors/404.php');
+							}
+						}
+					?>
+					<div class="clearfix"></div>
+				</div>
+				<?php include('config/init/footer.php'); ?>
+			</div>
+		</div>
+		<?php include('config/init/scripts.php'); ?>
     </body>
 </html>

@@ -180,7 +180,6 @@ function idCargoByName($name){
 	}
 };
 
-
 ### Consultar Nombre Categoria X Id y Type
 function nameCategoryById($id,$type){
 	$check = datosSQL("Select * from ".TBL_CATEGORIES." where id='{$id}' and type='{$type}'");
@@ -260,7 +259,6 @@ function pictureDeviceById($id){
 		return 0;
 	}
 };
-
 
 ### Cargar Permisos de User Actual [TODOS]
 function cargarPermisos(){
@@ -610,7 +608,6 @@ function ecardsCreateEnable(){
 	}
 };
 
-
 ### Validar el usuario actual puede crear contenido [eCards]
 function ecardsCategoriesCreateEnable(){
 	$ecards = cargarPermisosFor("ecards");
@@ -640,7 +637,6 @@ function ecardsCategoriesDeleteEnable(){
 		return false;
 	}
 };
-
 
 ### Validar el usuario actual puede crear contenido [articles]
 function articlesCategoriesCreateEnable(){
@@ -672,7 +668,6 @@ function articlesCategoriesDeleteEnable(){
 	}
 };
 
-
 ### Validar el usuario actual puede crear contenido [forum]
 function forumCategoriesCreateEnable(){
 	$forum = cargarPermisosFor("forum");
@@ -702,8 +697,6 @@ function forumCategoriesDeleteEnable(){
 		return false;
 	}
 };
-
-
 
 ### Validar el usuario actual puede responder preguntas del foro
 function forumResponses(){
@@ -852,7 +845,6 @@ function eCards_Banner($limit=10){
 	return $r;
 };
 
-
 ### Cnvertir id Imagen en URL con AccessToken Actual
 function urlImageById($id){
 	return url_api."/pictures.php?accesstoken={$_SESSION['accessToken']}&id={$id}";
@@ -954,7 +946,6 @@ function explorarRaizPublicaciones($piloto,$type,$limit,$offset,$of){
 	return $cats1_sql;
 };
 
-
 ### Cargar ultimos articulos publicados
 function ultimasConversaciones($userId,$limit=10){
 	$aregloFinal = array();
@@ -1022,7 +1013,6 @@ function parseArticles($post,$accessToken){
 function urlImageByIdAndAccessToken($id,$accessToken){
 	return url_api."/pictures.php?accesstoken={$accessToken}&id={$id}";
 };
-
 
 ### Recortar cadena de texto para parrafo
 function cortar_string($string, $largo) { 
@@ -1533,7 +1523,6 @@ function newPeopleImport($arreglo){
 	}
 };
 
-
 ### SANEAR STRING ADAPTADO PARA IMPORTACION
 function sanear_string($string){ 
     $string = trim($string); 
@@ -1590,15 +1579,10 @@ function sanear_string($string){
     return $string;
 }
 
-
-
 /* 	------------------------------------------------------------
 		######## FUNCIONES DENTRO DE LA PAGINA #######
 	------------------------------------------------------------
 */
-
-
-
 
 /* 	------------------------------------------------------------
 		######## FUNCIONES VERIFICADAS MARZO 2018 #######
@@ -1859,7 +1843,6 @@ function organizarKPIs($indicadores,$checkToken){
 	return $indicators;
 }
 
-
 ### Detectar Pagina activa
 function pageActive(){
 	$r = false;
@@ -1868,7 +1851,6 @@ function pageActive(){
 	}
 	return $r; 
 };
-
 
 /* 	------------------------------------------------------------
 		######## FUNCIONES DENTRO DE LA PAGINA #######

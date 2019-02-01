@@ -1,0 +1,7 @@
+Options +FollowSymLinks
+RewriteEngine On
+# ErrorDocument 404 index.php?pageActive=error&code=404
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php/records/$1 [L,QSA]
