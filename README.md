@@ -132,4 +132,4 @@ La mayor parte de las pagina de la API requieren su ejecucion con un accesstoken
 [tinymce]: <https://www.tinymce.com/>
 [pinterest_grid]: <https://github.com/ivmelo/jQuery-Pinterest-Grid>
 [fontawesome]: <https://fontawesome.com>
-[demoFormaT]: <https://intranet.ltsolucion.com>
+[demoFormaT]: <https://format.managertechnology.com.co/>
